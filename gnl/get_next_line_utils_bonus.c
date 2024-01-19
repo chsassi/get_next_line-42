@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
 
-int	ft_strlen(char *str)
+int	strlen_gnl(char *str)
 {
 	int		i;
 
@@ -21,7 +21,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char **s1, char *s2)
+char	*strjoin_gnl(char **s1, char *s2)
 {
 	char	*res;
 	int		len;
@@ -29,9 +29,9 @@ char	*ft_strjoin(char **s1, char *s2)
 	int		j;
 	int		s1_len;
 
-	s1_len = ft_strlen(*s1);
-	len = s1_len + ft_strlen(s2) + 1;
-	res = ft_calloc(len, sizeof(char));
+	s1_len = strlen_gnl(*s1);
+	len = s1_len + strlen_gnl(s2) + 1;
+	res = calloc_gnl(len, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -46,7 +46,7 @@ char	*ft_strjoin(char **s1, char *s2)
 	return (res);
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*calloc_gnl(size_t nmemb, size_t size)
 {
 	char	*str;
 	char	*ptr;
@@ -64,12 +64,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-int	ft_strchr(char *s, int c)
+int	strchr_idx(char *s, int c)
 {
 	int		i;
 	int		slen;
 
-	slen = ft_strlen(s);
+	slen = strlen_gnl(s);
 	i = 0;
 	while (s && i <= slen)
 	{
@@ -80,13 +80,13 @@ int	ft_strchr(char *s, int c)
 	return (-1);
 }
 
-char	*ft_substr(char *s, size_t start, size_t end)
+char	*substr_gnl(char *s, size_t start, size_t end)
 {
 	char			*res;
 	size_t			i;
 
 	i = 0;
-	res = ft_calloc((end - start + 1 + 1), sizeof(char));
+	res = calloc_gnl((end - start + 1 + 1), sizeof(char));
 	if (!res)
 		return (NULL);
 	while (start <= end && s[start])
