@@ -10,15 +10,6 @@ The implementation utilizes dynamic memory allocation to manage the storage of l
 The function reads data from the file descriptor in chunks (BUFFER_SIZE) to optimize performance and memory usage.
 It identifies and handles newline characters, allowing the function to provide complete lines even if they span multiple read operations.
 
-ft_find_nl:
-Locates newline characters in the input line and manages the storage of complete lines or partial lines.
-
-read_until_nl:
-Reads data from the file descriptor until a newline character is encountered, updating the result and waste variables accordingly.
-
-get_next_line:
-The main function that external users call. Manages the overall flow of the line retrieval process, considering both existing waste and new data reads.
-
 🇮🇹
 
 Questo progetto si concentra sull'implementazione di una funzione chiamata get_next_line in linguaggio C, la quale legge da un descrittore di file una riga alla volta. 
@@ -29,14 +20,5 @@ L'implementazione utilizza l'allocazione dinamica della memoria per gestire in m
 La funzione legge i dati dal descrittore di file a blocchi (BUFFER_SIZE) per ottimizzare le prestazioni e l'uso della memoria.
 Identifica e gestisce i caratteri di nuova riga, consentendo alla funzione di fornire righe complete anche se si estendono su più operazioni di lettura.
 
-ft_find_nl:
-Localizza i caratteri di nuova riga nella riga di input e gestisce lo storage di righe complete o righe parziali.
-
-read_until_nl:
-Legge i dati dal descrittore di file fino a quando non viene incontrato un carattere di nuova riga, aggiornando di conseguenza le variabili di risultato e di scarto.
-
-get_next_line:
-La funzione principale che gli utenti esterni chiamano. Gestisce il flusso complessivo del processo di recupero delle linee, considerando sia lo scarto esistente che le nuove letture dei dati.
-
 Moulinette: 125/100
-![697c09cc-73ea-482b-89a3-0d48272b6600](https://github.com/chsassi/get_next_line-42/assets/146337608/59e8e4a8-013f-427f-9629-de4200f86114)
+<img width="935" alt="gnl" src="https://github.com/chsassi/get_next_line-42/assets/146337608/f7f735be-da03-4b30-8b4a-3be0308433ac">
